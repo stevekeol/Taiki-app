@@ -23,24 +23,25 @@ public class ContainerEngine extends ReactContextBaseJavaModule {
     return "ContainerEngine";
   }
 
-  @ReactMethod
-  public void bootstrap() {
-    //在主进程中初始化框架配置，启动框架服务进程
-    if (HeraTrace.isMainProcess(this)){
-      HeraConfig config = new HeraConfig.Builder()
-        .setHostApiDispatcher(new HostApiDispatcher(this))
-        .setDebug(true)
-        .build();
-      HeraService.start(this.getApplicationContext(), config);
-    }
-  }
+  // @ReactMethod
+  // public void bootstrap() {
+  //   //在主进程中初始化框架配置，启动框架服务进程
+  //   if (HeraTrace.isMainProcess(this)){
+  //     HeraConfig config = new HeraConfig.Builder()
+  //       .setHostApiDispatcher(new HostApiDispatcher(this))
+  //       .setDebug(true)
+  //       .build();
+  //     HeraService.start(this.getApplicationContext(), config);
+  //   }
+  // }
 
-  //打开小程序
-  public void open() {
-    final String userId = "123";//标识宿主App业务用户id
-    final String appId = "demoapp";//小程序的id
-    final String appPath = "";//小程序的本地存储路径
+  // //打开小程序
+  // @ReactMethod
+  // public void open() {
+  //   final String userId = "123";//标识宿主App业务用户id
+  //   final String appId = "demoapp";//小程序的id
+  //   final String appPath = "";//小程序的本地存储路径
 
-    HeraService.launchHome(getApplicationContext(), userId, appId, appPath);    
-  }
+  //   HeraService.launchHome(getApplicationContext(), userId, appId, appPath);    
+  // }
 }

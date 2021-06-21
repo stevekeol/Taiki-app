@@ -2917,6 +2917,8 @@ containing a value of this type.
         public static int wrap_content=0x7f0e002e;
         //自己定义的，不应该这样做，纯属测试 fake_status_bar_view
         public static int fake_status_bar_view=0x7f0e002f;
+        public static int enter_hera=0x7f0e0030;
+        public static int set_result=0x7f0e0031;
         
     }
     public static final class integer {
@@ -3012,6 +3014,8 @@ containing a value of this type.
         public static int support_simple_spinner_dropdown_item=0x7f03004e;
         // 自己添加的(不应该这样做，纯测试)
         public static int hera_page=0x7f03004f;
+        public static int sample_activity=0x7f030050;
+        public static int for_result_activity=0x7f030051;
     }
     public static final class menu {
         public static int __picker_menu_picker=0x7f0f0000;

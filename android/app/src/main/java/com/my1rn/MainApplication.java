@@ -13,10 +13,12 @@ import java.util.List;
 
 import com.my1rn.CustomToastPackage;  //customModule
 import com.my1rn.ContainerEnginePackage; //customModule
+import com.my1rn.HostApiDispatcher; //customModule
 
-// //@CONTAINER_ENGINE
-// import com.weidian.lib.hera.config.HeraConfig;
-// import com.weidian.lib.hera.main.HeraService;
+//@CONTAINER_ENGINE
+import com.my1rn.config.HeraConfig;
+import com.my1rn.main.HeraService;
+import com.my1rn.trace.HeraTrace;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -35,7 +37,7 @@ public class MainApplication extends Application implements ReactApplication {
           // packages.add(new MyReactNativePackage());
           
           packages.add(new CustomToastPackage()); //在MainApplication中注册模块
-          packages.add(new ContainerEnginePackage());
+          packages.add(new ContainerEnginePackage()); //在MainApplication中注册模块
           return packages;
         }
 
@@ -57,22 +59,14 @@ public class MainApplication extends Application implements ReactApplication {
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
 
     //@CONTAINER_ENGINE
-    // 初始化框架配置，启动框架服务进程
-    // HeraConfig config = new HeraConfig.Builder()
-    //   // .setHostApiDispatcher(new HostApiDispatcher(this))
-    //   .setDebug(true)
-    //   .build();
-    // HeraService.start(this.getApplicationContext(), config);
-    
-    // //@CONTAINER_ENGINE
-    // //在主进程中初始化框架配置，启动框架服务进程
-    // if (HeraTrace.isMainProcess(this)){
-    //   HeraConfig config = new HeraConfig.Builder()
-    //     .setHostApiDispatcher(new HostApiDispatcher(this)) // 自定义扩展API配置
-    //     .setDebug(true) // 调试模式
-    //     .build();
-    //   HeraService.start(this.getApplicationContext(), config);
-    // }
+    //在主进程中初始化框架配置，启动框架服务进程
+    if (HeraTrace.isMainProcess(this)){
+      HeraConfig config = new HeraConfig.Builder()
+        .setHostApiDispatcher(new HostApiDispatcher(this)) // 自定义扩展API配置
+        .setDebug(true) // 调试模式
+        .build();
+      HeraService.start(this.getApplicationContext(), config);
+    }
 
   }
 
