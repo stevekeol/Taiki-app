@@ -51,6 +51,22 @@ layout {
 }
 ```
 
-3. ContainerEngine.java中
+3. npm run android时，报错： Execution failed for task ':app:mergeProjectDexDebug'.
+
++ /android/app/build.gradle 中 defaultConfig { multiDexEnabled true }
+
+> Task :app:mergeProjectDexDebug FAILED 其实我怀疑就是手写了R.java文件导致的。其实不必手动添加R.java。只需要将hera中java/res中相关资源文件复制到rn对应位置即可。
+
+4. Task :app:processDebugResources FAILED；Execution failed for task ':app:processDebugResources'.
+
+> 还是资源文件 java/res的问题
+
+5. 资源文件怎么定义，怎么使用?
++ 定义已经知道了;
++ 使用的话，getString(R.string.cancel)，其中R是否需要刻意引入? 如果需要的话，ReactNativ中如何生成R.java，生成的位置在哪?如何引入
+
+> import com.my1rn.R(好像甚至都不需要引入); 然后getContext().getString(R.string.app_name);
+
+6. ContainerEngine.java中
 
 + `HeraTrace.isMainProcess(this)`
