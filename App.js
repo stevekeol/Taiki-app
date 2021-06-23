@@ -13,7 +13,7 @@ import { ToastExample } from './customModule'; // customModule的使用
 
 
 setTimeout(() => {
-  ToastExample.show('Taiki: Awesome ContainerEngine', ToastExample.SHORT); // customModule
+  ToastExample.show('Taiki@JieGe', ToastExample.SHORT); // customModule
 }, 1000)
 
 // 容器引擎测试入口

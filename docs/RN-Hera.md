@@ -67,6 +67,8 @@ layout {
 
 > import com.my1rn.R(好像甚至都不需要引入); 然后getContext().getString(R.string.app_name);
 
-6. ContainerEngine.java中
+6. RN+Hera已经可以编译打包，在点击进入Hera按钮时，android应用闪退。
 
-+ `HeraTrace.isMainProcess(this)`
++ (可能)
+
+> Android开发如何进入调试模式:

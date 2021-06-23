@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#C60A1E</color>
-    <color name="colorPrimaryDark">#9E0818</color>
+    <color name="colorPrimary">#346751</color>
+    <color name="colorPrimaryDark">#346751</color>
     <color name="colorAccent">#C60A1E</color>
 	<color name="possible_result_points">#c0ffff00</color>
 	<color name="result_view">#b0000000</color>
@@ -9,3 +9,9 @@
 	<color name="viewfinder_laser">#ffff0000</color>
 	<color name="viewfinder_mask">#60000000</color>    
 </resources>
+
+<!-- 暂定配色 -->
+<!-- 黑: #161616 -->
+<!-- 绿: #346751 -->
+<!-- 红: #C84B31 -->
+<!-- 黄: #ECDBBA -->
