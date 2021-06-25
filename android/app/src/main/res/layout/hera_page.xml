@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <com.weidian.lib.hera.widget.ToastView
+        <com.my1rn.widget.ToastView
             android:id="@+id/toast_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

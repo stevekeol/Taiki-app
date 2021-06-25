@@ -34,6 +34,7 @@ public class MainActivity extends ReactActivity {
     findViewById(R.id.enter_hera).setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
+        System.out.println( userId);
         HeraService.launchHome(getApplicationContext(), userId, appId, appPath);
       }
     });
