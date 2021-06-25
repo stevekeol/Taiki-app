@@ -71,4 +71,17 @@ layout {
 
 + (可能)
 
-> Android开发如何进入调试模式:
+> Android开发如何进入调试模式: AndroidStudio中，Run App即可。然后在实体机器上操作，闪退导致的原因，会打印在AndroidStudio中。
+
+> 此时我闪退的原因是: `android.content.ActivityNotFoundException: Unable to find explicit activity class {com.my1rn/com.my1rn.main.HeraActivity}; have you declared this activity in your AndroidManifest.xml?`
+
+> 在AndroidManifest.xml中添加<Activity HeraActivity...>即可
+
+> 随即又报错：`E/libc: Access denied finding property "ro.vendor.df.effect.conflict"`
+
++ 可能是读取demoapp.zip不合法
++ android -> androidX时包导入有问题
+
+> 1. build.gradle中defaultConfig中增加`ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'`
+
+> 2. 

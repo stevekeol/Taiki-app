@@ -38,6 +38,7 @@ import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.webkit.WebView;
 
+import com.my1rn.main.HeraActivity;
 import com.my1rn.config.AppConfig;
 import com.my1rn.config.HeraConfig;
 import com.my1rn.trace.HeraTrace;
@@ -57,6 +58,7 @@ public class HeraService extends Service {
 
     private static final String TAG = "HeraProcessService";
     private static final String HERA_FRAMEWORK = "framework.zip";
+    // private static final String HERA_FRAMEWORK = "demoapp.zip";
 
     private static HeraConfig sConfig;
 
@@ -184,5 +186,4 @@ public class HeraService extends Service {
             HeraTrace.d(TAG, "unzip task is done: " + res);
         }
     }
-
 }
