@@ -16,10 +16,6 @@ setTimeout(() => {
   ToastExample.show('Taiki@JieGe', ToastExample.SHORT); // customModule
 }, 1000)
 
-// 容器引擎测试入口
-// setTimeout(() => {
-//   // 
-// }, 2000)
 
 import {
   SafeAreaView,
