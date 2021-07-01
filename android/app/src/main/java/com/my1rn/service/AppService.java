@@ -76,6 +76,10 @@ public class AppService extends LinearLayout implements IBridgeHandler {
         File serviceFile = new File(mAppConfig.getMiniAppSourcePath(getContext()),
                 "service.html");
         String servicePath = FileUtil.toUriString(serviceFile);
+
+        System.out.println("service.html will be loaded.");
+
+        // 在WebView中加载小程序编译后的入口html页面
         mServiceWebView.loadUrl(servicePath);
     }
 
@@ -112,6 +116,9 @@ public class AppService extends LinearLayout implements IBridgeHandler {
                         getEvent(), result, getCallbackId()));
                 String jsFun = getInvokeCallbackJS(getCallbackId(), result);
                 HeraTrace.d(TAG, String.format("[invokeCallback]%s", jsFun));
+
+                System.out.println("jsFun will be loaded.");
+                
                 mServiceWebView.loadUrl(jsFun);
             }
         };

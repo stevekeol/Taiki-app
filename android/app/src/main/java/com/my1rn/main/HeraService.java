@@ -164,6 +164,9 @@ public class HeraService extends Service {
         protected Boolean doInBackground(String... params) {
             boolean unzipSuccess = false;
             InputStream in = null;
+
+            HeraTrace.d(TAG, "doInBackground is called");
+
             try {
                 in = mContext.getAssets().open(HERA_FRAMEWORK);
                 unzipSuccess = ZipUtil.unzipFile(in,
