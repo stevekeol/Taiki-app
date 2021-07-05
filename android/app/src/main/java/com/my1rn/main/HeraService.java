@@ -113,8 +113,16 @@ public class HeraService extends Service {
     private static void initFramework(Context context) {
         boolean needUpdate = SharePreferencesUtil.loadBoolean(context, AppConfig.getHostVersion(context), true);
         if (!StorageUtil.isFrameworkExists(context) || needUpdate) {
+
+            System.out.println("========: framework need ");
+
             FrameworkInitTask task = new FrameworkInitTask(context);
             task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        } else {
+            System.out.println("========: framework not need ");
+
+            FrameworkInitTask task = new FrameworkInitTask(context); //???
+            task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);  //???     
         }
     }
 
