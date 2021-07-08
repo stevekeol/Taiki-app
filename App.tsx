@@ -9,18 +9,16 @@
 import React from 'react';
 import type { Node } from 'react';
 
-import { ToastExample } from './customModule'; // customModule的使用
-import { ContainerEngine } from './customModule';
-// import MopSDK from '@Taiki/ConEngine';
+import { ToastExample, ContainerEngine } from './customModule';
 
 setTimeout(() => {
   ToastExample.show('Taiki@JieGe', ToastExample.SHORT); // customModule
 }, 1000)
 
 setTimeout(() => {
-  const userId = "123";
-  const appId = "demoApp";
-  const appPath = "";
+  // const userId = "123";
+  // const appId = "demoApp";
+  // const appPath = "";
 
   ContainerEngine.openApplet();
 }, 3000)
