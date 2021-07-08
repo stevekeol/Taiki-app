@@ -15,10 +15,10 @@ import com.my1rn.CustomToastPackage;  //customModule
 import com.my1rn.ContainerEnginePackage; //customModule
 import com.my1rn.HostApiDispatcher; //customModule
 
-//@CONTAINER_ENGINE
-import com.my1rn.config.HeraConfig;
-import com.my1rn.main.HeraService;
-import com.my1rn.trace.HeraTrace;
+// //@CONTAINER_ENGINE
+// import com.my1rn.config.HeraConfig;
+// import com.my1rn.main.HeraService;
+// import com.my1rn.trace.HeraTrace;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -58,15 +58,15 @@ public class MainApplication extends Application implements ReactApplication {
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
 
-    //@CONTAINER_ENGINE
-    //在主进程中初始化框架配置，启动框架服务进程
-    if (HeraTrace.isMainProcess(this)){
-      HeraConfig config = new HeraConfig.Builder()
-        .setHostApiDispatcher(new HostApiDispatcher(this)) // 自定义扩展API配置
-        .setDebug(true) // 调试模式
-        .build();
-      HeraService.start(this.getApplicationContext(), config);
-    }
+    // //@CONTAINER_ENGINE
+    // //在主进程中初始化框架配置，启动框架服务进程
+    // if (HeraTrace.isMainProcess(this)){
+    //   HeraConfig config = new HeraConfig.Builder()
+    //     .setHostApiDispatcher(new HostApiDispatcher(this)) // 自定义扩展API配置
+    //     .setDebug(true) // 调试模式
+    //     .build();
+    //   HeraService.start(this.getApplicationContext(), config);
+    // }
 
   }
 

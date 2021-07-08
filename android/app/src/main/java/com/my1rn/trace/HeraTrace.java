@@ -119,6 +119,7 @@ public class HeraTrace {
                 processName = process.processName;
             }
         }
+        System.out.println("getProcessName: " + processName);
         return processName;
     }
     public static boolean isMainProcess(Context context) {

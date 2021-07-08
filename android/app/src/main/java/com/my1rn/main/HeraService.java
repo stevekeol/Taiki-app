@@ -106,7 +106,7 @@ public class HeraService extends Service {
     }
 
     /**
-     * 初始化解压framework到指定目录，虽版本升级进行更新的策略
+     * 初始化解压framework到指定目录，随着版本升级进行更新的策略
      *
      * @param context
      */
