@@ -11,18 +11,16 @@ import type { Node } from 'react';
 
 import { ToastExample, ContainerEngine } from './customModule';
 
+// 自定义原生模块
 setTimeout(() => {
   ToastExample.show('Taiki@JieGe', ToastExample.SHORT); // customModule
 }, 1000)
 
-setTimeout(() => {
-  // const userId = "123";
-  // const appId = "demoApp";
-  // const appPath = "";
+// 小程序容器引擎的初始化
+ContainerEngine.init();
 
-  ContainerEngine.openApplet();
-}, 3000)
-
+// 需要时，载入并运行某个小程序
+setTimeout(() => ContainerEngine.openApplet(), 3000)
 
 import {
   SafeAreaView,

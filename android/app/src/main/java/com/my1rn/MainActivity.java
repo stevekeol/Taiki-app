@@ -3,12 +3,13 @@ package com.my1rn;
 // 源码在react-native/ReactAndroid/src/main/java/com/facebook/react/ReactActivity.java中
 import com.facebook.react.ReactActivity; 
 
-import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import android.view.View;
+// import android.os.Bundle;
+// import androidx.annotation.Nullable;
+// import androidx.appcompat.app.AppCompatActivity;
+// import android.view.View;
 
-import com.my1rn.main.HeraService;
+
+// import com.my1rn.main.HeraService;
 
 public class MainActivity extends ReactActivity {
 
@@ -20,6 +21,7 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "my1RN";
   }
+
 
   // //@CONTAINER_ENGINE
   // @Override

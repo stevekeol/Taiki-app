@@ -2,6 +2,29 @@
 
 > 两者的编译模式不一致。RN是利用react.gradle(内部封装了android/iOS的编译差异)，后者是gradle。两者版本也不一致
 
+## 零散笔记
+
+- 区分RN项目在Android端的安装: 取决于/android/app/build.gradle中
+```md
+{
+  android {
+    defaultConfig {
+      ...
+      applicationId "com.xxx"
+      ...
+    }
+  }
+}
+```
+
+
+
+
+
+
+
+
+
 ## 坑
 
 1. android(hera) -> androidX(RN) 时，import导入各个包的差异:
