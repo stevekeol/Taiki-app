@@ -1,5 +1,10 @@
 package com.my1rn;
 
+import android.view.View; //设置状态栏透明
+import android.graphics.Color; //设置状态栏透明
+import android.os.Build; //设置状态栏透明
+import android.os.Bundle; //设置状态栏透明
+
 // 源码在react-native/ReactAndroid/src/main/java/com/facebook/react/ReactActivity.java中
 import com.facebook.react.ReactActivity; 
 
@@ -21,6 +26,17 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "my1RN";
   }
+
+  //设置状态栏透明
+  protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+
+      View decorView = getWindow().getDecorView();
+      decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+      if (Build.VERSION.SDK_INT >= 21) {
+          getWindow().setStatusBarColor(Color.TRANSPARENT);
+      }
+  }  
 
 
   // //@CONTAINER_ENGINE
