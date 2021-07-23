@@ -32,7 +32,8 @@ const Home = () => {
         align="center"
         justify="center"
         color={colors.card}
-        paddingBottom={sizes.sm}>
+        paddingBottom={sizes.sm}
+      >
         <Button onPress={() => handleProducts(0)}>
           <Block row align="center">
             <Block
@@ -58,43 +59,43 @@ const Home = () => {
           marginHorizontal={sizes.sm}
           height={sizes.socialIconSize}
         />
-        <Button onPress={() => handleProducts(1)}>
-          <Block row align="center">
-            <Block
-              flex={0}
-              radius={6}
-              align="center"
-              justify="center"
-              marginRight={sizes.s}
-              width={sizes.socialIconSize}
-              height={sizes.socialIconSize}
-              gradient={gradients?.[tab === 1 ? 'primary' : 'secondary']}>
-              <Image
-                radius={0}
-                color={colors.white}
-                source={assets.documentation}
-              />
+          <Button onPress={() => handleProducts(1)}>
+            <Block row align="center">
+              <Block
+                flex={0}
+                radius={6}
+                align="center"
+                justify="center"
+                marginRight={sizes.s}
+                width={sizes.socialIconSize}
+                height={sizes.socialIconSize}
+                gradient={gradients?.[tab === 1 ? 'primary' : 'secondary']}>
+                <Image
+                  radius={0}
+                  color={colors.white}
+                  source={assets.documentation}
+                />
+              </Block>
+              <Text p font={fonts?.[tab === 1 ? 'medium' : 'normal']}>
+                {t('home.trending')}
+              </Text>
             </Block>
-            <Text p font={fonts?.[tab === 1 ? 'medium' : 'normal']}>
-              {t('home.trending')}
-            </Text>
-          </Block>
-        </Button>
-      </Block>
+          </Button>
+        </Block>
 
-      {/* products list */}
-      <Block
-        scroll
-        paddingHorizontal={sizes.padding}
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{paddingBottom: sizes.l}}>
-        <Block row wrap="wrap" justify="space-between" marginTop={sizes.sm}>
-          {products?.map((product) => (
-            <Product {...product} key={`card-${product?.id}`} />
-          ))}
+        {/* products list */}
+        <Block
+          scroll
+          paddingHorizontal={sizes.padding}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{paddingBottom: sizes.l}}>
+          <Block row wrap="wrap" justify="space-between" marginTop={sizes.sm}>
+            {products?.map((product) => (
+              <Product {...product} key={`card-${product?.id}`} />
+            ))}
+          </Block>
         </Block>
       </Block>
-    </Block>
   );
 };
 

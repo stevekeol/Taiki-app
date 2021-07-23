@@ -57,7 +57,7 @@ const ScreensStack = () => {
           borderWidth: isDrawerOpen ? 1 : 0,
         },
       ])}>
-      {/*  */}
+      {/* 所有的screen */}
       <Screens />
     </Animated.View>
   );
@@ -89,25 +89,25 @@ const DrawerContent = (
 
   // screen list for Drawer menu
   const screens = [
-    {name: t('screens.home'), to: 'Home', icon: assets.home},
+    {name: t('screens.home'),       to: 'Home',       icon: assets.home},
     {name: t('screens.components'), to: 'Components', icon: assets.components},
-    {name: t('screens.articles'), to: 'Articles', icon: assets.document},
-    {name: t('screens.rental'), to: 'Rentals', icon: assets.rental},
-    {name: t('screens.profile'), to: 'Profile', icon: assets.profile},
-    {name: t('screens.settings'), to: 'Settings', icon: assets.settings},
-    {name: t('screens.register'), to: 'Register', icon: assets.register},
-    {name: t('screens.extra'), to: 'Extras', icon: assets.star},
-    {name: t('screens.about'), to: 'About', icon: assets.star},
-    {name: t('screens.agreement'), to: 'Agreement', icon: assets.star},
-    {name: t('screens.chat'), to: 'Chat', icon: assets.star},
+    {name: t('screens.articles'),   to: 'Articles',   icon: assets.document},
+    {name: t('screens.rental'),     to: 'Rentals',    icon: assets.rental},
+    {name: t('screens.profile'),    to: 'Profile',    icon: assets.profile},
+    {name: t('screens.settings'),   to: 'Settings',   icon: assets.settings},
+    {name: t('screens.register'),   to: 'Register',   icon: assets.register},
+    {name: t('screens.extra'),      to: 'Extras',     icon: assets.star},
+    {name: t('screens.about'),      to: 'About',      icon: assets.star},
+    {name: t('screens.agreement'),  to: 'Agreement',  icon: assets.star},
+    {name: t('screens.chat'),       to: 'Chat',       icon: assets.star},
+    {name: t('screens.privacy'),    to: 'Privacy',    icon: assets.star},
+    {name: t('screens.login'),      to: 'Login',      icon: assets.star},
+    {name: t('screens.rental'),     to: 'Rental',     icon: assets.star},
+    {name: t('screens.booking'),    to: 'Booking',    icon: assets.star},
+    {name: t('screens.pro'),        to: 'Pro',        icon: assets.star},
+    {name: t('screens.shopping'),   to: 'Shopping',   icon: assets.star},
     {name: t('screens.notifications'), to: 'Notifications', icon: assets.star},
-    {name: t('screens.notificationsSettings'), to: 'NotificationsSettings', icon: assets.star},
-    {name: t('screens.privacy'), to: 'Privacy', icon: assets.star},
-    {name: t('screens.login'), to: 'Login', icon: assets.star},
-    {name: t('screens.rental'), to: 'Rental', icon: assets.star},
-    {name: t('screens.booking'), to: 'Booking', icon: assets.star},
-    {name: t('screens.pro'), to: 'Pro', icon: assets.star},
-    {name: t('screens.shopping'), to: 'Shopping', icon: assets.star}
+    {name: t('screens.notificationsSettings'), to: 'NotificationsSettings', icon: assets.star}
   ];
 
   return (
@@ -260,10 +260,12 @@ export default () => {
 
   return (
     <Block gradient={gradients.light}>
+      {/*Drawer栏的导航器*/}
       <Drawer.Navigator
         drawerType="slide"
         overlayColor="transparent"
         sceneContainerStyle={{backgroundColor: 'transparent'}}
+        // props是从哪儿传进来的?
         drawerContent={(props) => <DrawerContent {...props} />}
         drawerStyle={{
           flex: 1,
@@ -271,6 +273,7 @@ export default () => {
           borderRightWidth: 0,
           backgroundColor: 'transparent',
         }}>
+        {/* 此处认真感受 Drawer栏的导航 & Stack页面的导航间的关系 */}
         <Drawer.Screen name="Screens" component={ScreensStack} />
       </Drawer.Navigator>
     </Block>

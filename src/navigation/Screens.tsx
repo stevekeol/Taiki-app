@@ -20,7 +20,8 @@ import {
   Rental,
   Booking,
   Pro, 
-  Shopping
+  Shopping,
+  Web
 } from '../screens';
 import {useScreenOptions, useTranslation} from '../hooks';
 
@@ -31,6 +32,7 @@ export default () => {
   const screenOptions = useScreenOptions();
 
   return (
+    // 页面栈的导航器
     <Stack.Navigator screenOptions={screenOptions.stack}>
       <Stack.Screen
         name="Home"
@@ -55,37 +57,37 @@ export default () => {
       <Stack.Screen
         name="Profile"
         component={Profile}
-        options={{headerShown: false}}
+        options={{title: t('navigation.home')}}
       />
 
       <Stack.Screen
         name="Register"
         component={Register}
-        options={{headerShown: false}}
+        options={{title: t('navigation.home')}}
       />
 
       <Stack.Screen
         name="Rentals"
         component={Rentals}
-        options={{headerShown: false}}
+        options={{title: t('navigation.home')}}
       />
 
       <Stack.Screen
         name="Settings"
         component={Settings}
-        options={{headerShown: false}}
+        options={{title: t('navigation.home')}}
       />   
       
       <Stack.Screen
         name="Extras"
         component={Extras}
-        options={{headerShown: false}}
+        options={{title: t('navigation.home')}}
       />
 
       <Stack.Screen
         name="About"
         component={About}
-        options={{headerShown: false}}
+        options={{title: t('navigation.home')}}
       />
 
       <Stack.Screen
@@ -97,19 +99,19 @@ export default () => {
       <Stack.Screen
         name="Chat"
         component={Chat}
-        options={{headerShown: false}}
+        options={{title: t('navigation.home')}}
       />  
 
       <Stack.Screen
         name="Notifications"
         component={Notifications}
-        options={{headerShown: false}}
+        options={{title: t('navigation.home')}}
       />  
 
       <Stack.Screen
         name="NotificationsSettings"
         component={NotificationsSettings}
-        options={{headerShown: false}}
+        options={{title: t('navigation.home')}}
       />
 
       <Stack.Screen
@@ -121,26 +123,33 @@ export default () => {
       <Stack.Screen
         name="Login"
         component={Login}
-        options={{headerShown: false}}
+        options={{title: t('navigation.home')}}
       /> 
 
       <Stack.Screen
         name="Rental"
         component={Rental}
-        options={{headerShown: false}}
+        options={{title: t('navigation.home')}}
       />
 
       <Stack.Screen
         name="Booking"
         component={Booking}
-        options={{headerShown: false}}
+        options={{title: t('navigation.home')}}
       />  
 
       <Stack.Screen
         name="Shopping"
         component={Shopping}
+        options={{title: t('navigation.home')}}
+      />
+
+      <Stack.Screen
+        name="Web"
+        component={Web}
         options={{headerShown: false}}
-      />        
+        // options={{title: 'WebView版本'}}
+      />               
     </Stack.Navigator>
   );
 };

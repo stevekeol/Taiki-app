@@ -460,7 +460,7 @@ export const RECOMMENDATIONS: IArticle[] = [
 export const MESSSAGES = [
   {
     _id: 1,
-    text: 'Bye, bye 👋🏻',
+    text: 'See u later 👋🏻',
     createdAt: dayjs().subtract(1, 'm').toDate(),
     user: {
       _id: USERS[0].id,
@@ -490,7 +490,7 @@ export const MESSSAGES = [
   },
   {
     _id: 4,
-    text: 'Hey there! How are you today? Can we meet and talk about location? Thanks!',
+    text: 'Hey Jiege! How are you today? Can we meet and talk about location? Thanks!',
     createdAt: dayjs().subtract(4, 'm').toDate(),
     user: {
       _id: USERS[1].id,

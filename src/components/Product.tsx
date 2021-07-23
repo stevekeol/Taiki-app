@@ -1,5 +1,6 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
+import {useNavigation} from '@react-navigation/core';
 
 import Block from './Block';
 import Image from './Image';
@@ -9,6 +10,7 @@ import {useTheme, useTranslation} from '../hooks/';
 
 const Product = ({image, title, type, linkLabel}: IProduct) => {
   const {t} = useTranslation();
+  const navigation = useNavigation();
   const {assets, colors, sizes} = useTheme();
 
   const isHorizontal = type !== 'vertical';
@@ -44,6 +46,12 @@ const Product = ({image, title, type, linkLabel}: IProduct) => {
               color={colors.link}
               semibold
               size={sizes.linkSize}
+              onPress={
+                (title) => {
+                  console.log('1231231231')
+                  navigation.navigate('Web', { title });
+                }
+              }
               marginRight={sizes.s}>
               {linkLabel || t('common.readArticle')}
             </Text>

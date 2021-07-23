@@ -17,3 +17,4 @@ export {default as Rentals} from './Rentals';
 export {default as Booking} from './Booking';
 export {default as Settings} from './Settings';
 export {default as Shopping} from './Shopping';
+export {default as Web} from './Web';
