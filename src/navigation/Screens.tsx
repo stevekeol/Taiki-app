@@ -147,8 +147,7 @@ export default () => {
       <Stack.Screen
         name="Web"
         component={Web}
-        options={{headerShown: false}}
-        // options={{title: 'WebView版本'}}
+        options={{title: 'WebView版本'}}
       />               
     </Stack.Navigator>
   );
