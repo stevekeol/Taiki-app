@@ -21,7 +21,7 @@ export const DefiProjects = [
       "href": "https://www.block123.com/zh-hans/nav/673185887329.htm"
   },
   {
-      "logo": "https://static.block123.com/release/static/images/icon-avatar.png",
+      "logo": "https://img.block123.com/nav/image/36ea73c8-6f0a-5f4b-a077-91d77f93b4da_yNTjmJ5.jpg?imageView2/0/w/128/format/jpg/",
       "name": "wyre",
       "bio": "最快、最具成效的跨境支付。",
       "href": "https://www.block123.com/zh-hans/nav/999142480266.htm"

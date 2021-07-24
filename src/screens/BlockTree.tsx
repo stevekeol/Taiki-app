@@ -10,11 +10,6 @@ const Home = () => {
   const [products, setProducts] = useState(following);
   const {assets, colors, fonts, gradients, sizes} = useTheme();
 
-  console.log('======')
-  console.log(blockTree);
-  console.log(blockTree[1]);
-
-
   const handleProducts = useCallback(
     (tab: number) => {
       setTab(tab);
@@ -25,11 +20,6 @@ const Home = () => {
 
   return (
     <Block>
-      {/* search input */}
-      <Block color={colors.card} flex={0} padding={sizes.padding}>
-        <Input search placeholder={t('common.search')} />
-      </Block>
-
       {/* toggle products list */}
       <Block
         row
@@ -105,11 +95,3 @@ const Home = () => {
 };
 
 export default Home;
-              // <ProjectProfile 
-              // name={'zhangjie'} 
-              // logo={'https://img.block123.com/nav/images/ed999010-f1fb-51c1-b48e-c0979f4c1c78_T1Xvz0P.jpg?imageView2/0/w/128/format/jpg/'} 
-              // key={`123`}
-              // bio={'test'} />
-          // {products?.map((product) => (
-          //     <Product {...product} key={`card-${product?.id}`} />
-          //   ))}

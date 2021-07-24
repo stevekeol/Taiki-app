@@ -89,8 +89,8 @@ const DrawerContent = (
 
   // screen list for Drawer menu
   const screens = [
+    {name: '精选区块链项目',         to: 'BlockTree',  icon: assets.components},
     {name: t('screens.home'),       to: 'Home',       icon: assets.home},
-    {name: '精选区块链项目',         to: 'BlockTree',  icon: assets.home},
     {name: t('screens.components'), to: 'Components', icon: assets.components},
     {name: t('screens.articles'),   to: 'Articles',   icon: assets.document},
     {name: t('screens.rental'),     to: 'Rentals',    icon: assets.rental},
@@ -139,6 +139,35 @@ const DrawerContent = (
           </Block>
         </Block>
 
+      {/* 临时: 进入小程序容器引擎 */}
+        <Button
+          row
+          justify="flex-start"
+          marginBottom={sizes.s}
+          key={`menu-screen-containerEngine`}
+          onPress={() => openApplet()}>
+          <Block
+            flex={0}
+            radius={6}
+            align="center"
+            justify="center"
+            width={sizes.md}
+            height={sizes.md}
+            marginRight={sizes.s}
+            gradient={gradients['primary']}>
+            <Image
+              radius={0}
+              width={14}
+              height={14}
+              source={assets.star}
+              color={colors['white']}
+            />
+          </Block>
+          <Text p semibold={true} color={labelColor}>
+            {t('screens.containerEngine')}
+          </Text>
+        </Button>        
+
         {screens?.map((screen, index) => {
           const isActive = active === screen.to;
           return (
@@ -171,35 +200,6 @@ const DrawerContent = (
             </Button>
           );
         })}
-
-      {/* 临时: 进入小程序容器引擎 */}
-        <Button
-          row
-          justify="flex-start"
-          marginBottom={sizes.s}
-          key={`menu-screen-containerEngine`}
-          onPress={() => openApplet()}>
-          <Block
-            flex={0}
-            radius={6}
-            align="center"
-            justify="center"
-            width={sizes.md}
-            height={sizes.md}
-            marginRight={sizes.s}
-            gradient={gradients['primary']}>
-            <Image
-              radius={0}
-              width={14}
-              height={14}
-              source={assets.star}
-              color={colors['white']}
-            />
-          </Block>
-          <Text p semibold={true} color={labelColor}>
-            {t('screens.containerEngine')}
-          </Text>
-        </Button>        
 
         <Block
           flex={0}
