@@ -549,3 +549,5 @@ export const DefiProjects = [
       "href": "https://www.block123.com/zh-hans/nav/288587228665.htm"
   }
 ];
+
+export default DefiProjects;

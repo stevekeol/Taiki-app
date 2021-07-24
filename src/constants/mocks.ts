@@ -11,6 +11,9 @@ import {
   IUser,
 } from './types';
 
+// Blockchain Projects
+import BLOCKTREE from './BlockTree';
+
 // users
 export const USERS: IUser[] = [
   {
@@ -711,4 +714,5 @@ export default {
   MESSSAGES,
   EXTRAS,
   NOTIFICATIONS,
+  BLOCKTREE
 };

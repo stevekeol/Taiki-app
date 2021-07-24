@@ -7,6 +7,8 @@ export * from './components';
 export * from './theme';
 export * from './projectProfile';
 
+import {IProjectProfile} from '../BlockTree/@types';
+
 export interface IUser {
   id: number | string;
   name?: string;
@@ -86,6 +88,7 @@ export interface IUseData {
   handleArticle: (data?: IArticle) => void;
   notifications: INotification[];
   handleNotifications: (data?: INotification[]) => void;
+  blockTree: IProjectProfile;
 }
 
 export interface ITranslate {

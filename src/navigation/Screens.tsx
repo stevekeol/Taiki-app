@@ -21,7 +21,8 @@ import {
   Booking,
   Pro, 
   Shopping,
-  Web
+  Web,
+  BlockTree
 } from '../screens';
 import {useScreenOptions, useTranslation} from '../hooks';
 
@@ -145,9 +146,15 @@ export default () => {
       />
 
       <Stack.Screen
+        name="BlockTree"
+        component={BlockTree}
+        options={{title: '精选区块链项目'}}
+      />      
+
+      <Stack.Screen
         name="Web"
         component={Web}
-        options={{title: 'WebView版本'}}
+        options={{title: '精选区块链项目'}}
       />               
     </Stack.Navigator>
   );

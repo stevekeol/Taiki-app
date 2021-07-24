@@ -10,6 +10,8 @@ import {
   ITheme,
 } from '../constants/types';
 
+import { IProjectProfile } from '../constants/BlockTree/@types';
+
 import {
   USERS,
   FOLLOWING,
@@ -18,6 +20,7 @@ import {
   ARTICLES,
 } from '../constants/mocks';
 import {light} from '../constants';
+import BLOCKTREE from '../constants/BlockTree/defiProjects';
 
 export const DataContext = React.createContext({});
 
@@ -31,6 +34,7 @@ export const DataProvider = ({children}: {children: React.ReactNode}) => {
   const [categories, setCategories] = useState<ICategory[]>(CATEGORIES);
   const [articles, setArticles] = useState<IArticle[]>(ARTICLES);
   const [article, setArticle] = useState<IArticle>({});
+  const [blockTree, setBlockTree] = useState<IProjectProfile>(BLOCKTREE);
 
   // get isDark mode from storage
   const getIsDark = useCallback(async () => {
@@ -117,6 +121,7 @@ export const DataProvider = ({children}: {children: React.ReactNode}) => {
     setArticles,
     article,
     handleArticle,
+    blockTree
   };
 
   return (

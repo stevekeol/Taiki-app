@@ -1,4 +1,4 @@
-export interface IProjectProfile {
+export interface IProProfile {
   logo: string;
   name: string;
   bio: string;
@@ -19,6 +19,8 @@ export interface IProjectProfile {
     discord?: string;
   }
 }
+
+export type IProjectProfile = Array<IProProfile>;
 
 export interface ITag {
   name: string;
