@@ -68,8 +68,8 @@
  * 10.金融科技
  */
 
-import DefiProjects from './defiProjects';
-export default DefiProjects;
+import NFTs from './NFTs';
+export default NFTs;
 
 // export * from './defiProjects'; // 精选以太坊Defi项目
 export * from './tags'; // 标签索引

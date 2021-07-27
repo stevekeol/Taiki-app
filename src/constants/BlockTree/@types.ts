@@ -1,12 +1,13 @@
 export interface IProProfile {
+  href: string;
   logo: string;
   name: string;
   bio: string;
-  href: string;
   web?: string;
-  tags?: string[];
+  tags?: string[]; //1
   desc?: string;
-  social?: {
+  social?: { //图标直接用className来实现
+    github?: string;
     medium?: string;
     telegram?: string;
     youtube?: string;
@@ -15,7 +16,6 @@ export interface IProProfile {
     facebook?: string;
     pencial?: string;
     slack?: string;
-    github?: string;
     discord?: string;
   }
 }

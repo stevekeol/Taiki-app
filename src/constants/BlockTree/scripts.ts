@@ -96,3 +96,5 @@ for(let i = 0; i < profiles.length; i++) {
   })
 }
 console.log(results);
+
+/** 打开页面，然后抓取页面的相关字段 */
