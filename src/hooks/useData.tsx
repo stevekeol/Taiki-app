@@ -20,7 +20,7 @@ import {
   ARTICLES,
 } from '../constants/mocks';
 import {light} from '../constants';
-import BLOCKTREE from '../constants/BlockTree/defiProjects';
+import {NFTs} from '../constants/BlockTree/NFTs';
 
 export const DataContext = React.createContext({});
 
@@ -34,7 +34,7 @@ export const DataProvider = ({children}: {children: React.ReactNode}) => {
   const [categories, setCategories] = useState<ICategory[]>(CATEGORIES);
   const [articles, setArticles] = useState<IArticle[]>(ARTICLES);
   const [article, setArticle] = useState<IArticle>({});
-  const [blockTree, setBlockTree] = useState<IProjectProfile>(BLOCKTREE);
+  const [blockTree, setBlockTree] = useState<IProjectProfile>(NFTs);
 
   // get isDark mode from storage
   const getIsDark = useCallback(async () => {

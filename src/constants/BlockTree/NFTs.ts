@@ -1,5 +1,5 @@
 /** 精选 NFT 项目 */
-export const DefiProjects = [
+export const NFTs = [
   {
     href: 'https://www.block123.com/zh-hans/nav/876463649788.htm',
     logo: 'https://img.block123.com/nav/images/8d3dad506e89590296bb24c723afa615.jpeg',
@@ -8670,3 +8670,4 @@ export const DefiProjects = [
     }
   }
 ];
+
