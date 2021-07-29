@@ -98,3 +98,94 @@ for(let i = 0; i < profiles.length; i++) {
 console.log(results);
 
 /** 打开页面，然后抓取页面的相关字段 */
+/**
+ * 脚本简介: 爬取给定urls对应页面中相关区块链项目的profiles
+ * 1. 将控制台的内容原样输出到文件: `node index.js > E:/BlockSpider/NFTs.js`
+ * 2. 详见BlockSpider项目
+ */
+
+const fs = require("fs");
+const Crawler = require('crawler');
+
+/**种子数据 */
+const origins = [];
+
+const selector = new Map()
+  .set('logo', '.category-nav-short-info-wrapper .left-item img')
+  .set('name', '.category-nav-short-info-wrapper .right-item .nav-name')
+  .set('bio', '.category-nav-short-info-wrapper .right-item .bio-wrapper')
+  .set('tags', '.category-nav-short-info-wrapper .right-item .tags-wrapper a')
+  .set('desc', '.nav-detail-content-container .nav-detail-desc-wrapper .desc-content p')
+  .set('web', '.nav-detail-content-container .sidebar .web-site-wrapper .web-site a')
+  .set('social', '.nav-detail-content-container .sidebar .nav-social .social-list a')
+
+let result = [];
+let count = 0;
+
+
+const hrefs = origins.map(page => page.href);
+
+const spider = new Crawler({
+  maxConnections: 10,
+  // rateLimit: 1000, // maxConnections 被设置为1(tasks的间隔最小为1000ms)
+  callback: (error, res, done) => {
+    if (error) {
+      console.log(error);
+    } else {
+      const $ = res.$;
+      const href = res.request.href;
+      const logo = $(selector.get('logo')).attr("src").split("?")[0];
+      const name = $(selector.get('name')).text();
+      const bio  = $(selector.get('bio')).text();
+      const web  = $(selector.get('web')).attr("href");
+      const tags = $(selector.get('tags')).text().trim().replace(/\n\n/g, " ").split(" ");
+      const desc = $(selector.get('desc')).text();
+
+      const social = {};
+      $(selector.get('social')).each((index, element) => {
+        const name = $('i', element).attr("class").split("-")[1];
+        const url = $('i', element).parent().attr("href").split("?")[0];
+        social[name] = url;
+      })
+
+      const socialItem = {
+        href,
+        logo,
+        name,
+        bio,
+        web,
+        tags,
+        desc,
+        social
+      };
+      
+      console.log(socialItem);
+      console.log(',');
+
+    }
+    done();
+  }
+});
+
+hrefs.forEach(href => {
+  spider.queue(href)
+})
+
+spider.queue(hrefs);
+
+
+/**
+ * 去重脚本: node index.js > result.js
+ */
+const nfts = [];
+
+
+let map = new Map();
+
+nfts.forEach(nft => {
+  if(!map.get(nft.name)) {
+    map.set(nft.name, true);
+    console.log(nft);
+    console.log(',');
+  }
+})

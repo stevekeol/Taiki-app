@@ -69,7 +69,8 @@
  */
 
 import NFTs from './NFTs';
-export default NFTs;
+import socails from './socails';
+export default socails;
 
 // export * from './defiProjects'; // 精选以太坊Defi项目
 export * from './tags'; // 标签索引
