@@ -100,7 +100,7 @@ export default () => {
       <Stack.Screen
         name="Chat"
         component={Chat}
-        options={{title: t('navigation.home')}}
+        options={{title: '加密聊天'}}
       />  
 
       <Stack.Screen

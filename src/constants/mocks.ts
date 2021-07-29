@@ -473,7 +473,7 @@ export const MESSSAGES = [
   },
   {
     _id: 2,
-    text: 'Ok. Cool! See you 😁',
+    text: 'Leave me alone, please 😁',
     createdAt: dayjs().subtract(2, 'm').toDate(),
     user: {
       _id: USERS[1].id,
@@ -483,7 +483,7 @@ export const MESSSAGES = [
   },
   {
     _id: 3,
-    text: 'Sure, just let me finish somerhing and I’ll call you.',
+    text: 'Jiege is cool. 💋',
     createdAt: dayjs().subtract(3, 'm').toDate(),
     user: {
       _id: USERS[0].id,
@@ -493,7 +493,7 @@ export const MESSSAGES = [
   },
   {
     _id: 4,
-    text: 'Hey Jiege! How are you today? Can we meet and talk about location? Thanks!',
+    text: '❄️🔒 ✏️🏆🌽',
     createdAt: dayjs().subtract(4, 'm').toDate(),
     user: {
       _id: USERS[1].id,
@@ -501,6 +501,36 @@ export const MESSSAGES = [
       avatar: USERS[1].avatar,
     },
   },
+  {
+    _id: 5,
+    text: '🍓🍋 🍆🍑🍇',
+    createdAt: dayjs().subtract(5, 'm').toDate(),
+    user: {
+      _id: USERS[0].id,
+      name: USERS[0].name,
+      avatar: USERS[0].avatar,
+    },
+  },
+  {
+    _id: 6,
+    text: '🌹 📞🔋📫💊⚽🏀',
+    createdAt: dayjs().subtract(6, 'm').toDate(),
+    user: {
+      _id: USERS[1].id,
+      name: USERS[1].name,
+      avatar: USERS[1].avatar,
+    },
+  },
+  {
+    _id: 7,
+    text: '✈️💯⚡🌊🐒🐫🐴🐌🐐🐖',
+    createdAt: dayjs().subtract(7, 'm').toDate(),
+    user: {
+      _id: USERS[0].id,
+      name: USERS[0].name,
+      avatar: USERS[0].avatar,
+    },
+  },      
 ];
 
 // extras cards
