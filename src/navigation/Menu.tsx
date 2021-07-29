@@ -89,26 +89,26 @@ const DrawerContent = (
 
   // screen list for Drawer menu
   const screens = [
-    {name: '精选区块链项目',         to: 'BlockTree',  icon: assets.components},
-    {name: t('screens.home'),       to: 'Home',       icon: assets.home},
-    {name: t('screens.components'), to: 'Components', icon: assets.components},
-    {name: t('screens.articles'),   to: 'Articles',   icon: assets.document},
-    {name: t('screens.rental'),     to: 'Rentals',    icon: assets.rental},
-    {name: t('screens.profile'),    to: 'Profile',    icon: assets.profile},
-    {name: t('screens.settings'),   to: 'Settings',   icon: assets.settings},
-    {name: t('screens.register'),   to: 'Register',   icon: assets.register},
-    {name: t('screens.extra'),      to: 'Extras',     icon: assets.star},
-    {name: t('screens.about'),      to: 'About',      icon: assets.star},
-    {name: t('screens.agreement'),  to: 'Agreement',  icon: assets.star},
-    {name: t('screens.chat'),       to: 'Chat',       icon: assets.star},
-    {name: t('screens.privacy'),    to: 'Privacy',    icon: assets.star},
-    {name: t('screens.login'),      to: 'Login',      icon: assets.star},
-    {name: t('screens.rental'),     to: 'Rental',     icon: assets.star},
-    {name: t('screens.booking'),    to: 'Booking',    icon: assets.star},
-    {name: t('screens.pro'),        to: 'Pro',        icon: assets.star},
-    {name: t('screens.shopping'),   to: 'Shopping',   icon: assets.star},
-    {name: t('screens.notifications'), to: 'Notifications', icon: assets.star},
-    {name: t('screens.notificationsSettings'), to: 'NotificationsSettings', icon: assets.star}
+    {name: t('screens.profects'),       to: 'BlockTree',  icon: assets.components},
+    {name: t('screens.home'),           to: 'Home',       icon: assets.home},
+    {name: t('screens.chat'),           to: 'Chat',       icon: assets.chat},
+    {name: t('screens.about'),          to: 'About',      icon: assets.star},
+    // {name: t('screens.components'),  to: 'Components', icon: assets.components},
+    // {name: t('screens.articles'),    to: 'Articles',   icon: assets.document},
+    // {name: t('screens.rental'),      to: 'Rentals',    icon: assets.rental},
+    // {name: t('screens.profile'),     to: 'Profile',    icon: assets.profile},
+    // {name: t('screens.settings'),    to: 'Settings',   icon: assets.settings},
+    // {name: t('screens.register'),    to: 'Register',   icon: assets.register},
+    // {name: t('screens.extra'),       to: 'Extras',     icon: assets.star},
+    // {name: t('screens.agreement'),   to: 'Agreement',  icon: assets.star},
+    // {name: t('screens.privacy'),     to: 'Privacy',    icon: assets.star},
+    // {name: t('screens.login'),       to: 'Login',      icon: assets.star},
+    // {name: t('screens.rental'),      to: 'Rental',     icon: assets.star},
+    // {name: t('screens.booking'),     to: 'Booking',    icon: assets.star},
+    // {name: t('screens.pro'),         to: 'Pro',        icon: assets.star},
+    // {name: t('screens.shopping'),    to: 'Shopping',   icon: assets.star},
+    // {name: t('screens.notifications'), to: 'Notifications', icon: assets.star},
+    // {name: t('screens.notificationsSettings'), to: 'NotificationsSettings', icon: assets.star}
   ];
 
   return (

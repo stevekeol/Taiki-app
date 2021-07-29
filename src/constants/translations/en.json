@@ -46,7 +46,8 @@
       "one": "1 guest",
       "other": "{{count}} guests",
       "zero": "0 Guests"
-    }
+    },
+    "PayTribute": "致敬"
   },
   "app": {
     "name": "Taiki",
@@ -56,7 +57,16 @@
   },
   "darkMode": "Dark Mode",
   "screens": {
-    "home": "Home",
+    // "containerEngine": "【项】小程序容器引擎",
+    // "profects": "【目】精选区块链项目",
+    // "home": "【进】首页",
+    // "chat": "【行】加密聊天",
+    // "about": "【中】憋说话 吻我",
+    "containerEngine": "【项】Container Enginer",
+    "profects": "【目】Blockchain Projects",
+    "home": "【进】Home",
+    "chat": "【行】Chat",
+    "about": "【中】About",    
     "components": "Components",
     "articles": "Articles",
     "rental": "Rental",
@@ -64,17 +74,14 @@
     "settings": "Settings",
     "register": "Create account",
     "extra": "Extra - Automotive",
-    "about": "About",
     "agreement": "Agreement",
-    "chat": "Chat",
     "notifications": "Notifications",
     "notificationsSettings": "通知设置",
     "privacy": "Privacy",
     "login": "Login",
     "booking": "Booking",
     "pro": "Pro",
-    "shopping": "Shopping",
-    "containerEngine": "小程序容器引擎"
+    "shopping": "Shopping"
   },
   "navigation": {
     "home": "Taiki@stevekeol",
@@ -194,8 +201,8 @@
     "alsoShopped": "Customers who shopped for items in your cart also shopped for"
   },
   "upgrade": {
-    "title": "Taiki",
-    "alert": "老子还没空搞这些..."
+    "title": "@Taiki",
+    "alert": "睡会儿，明天再撸，可否？"
   }  
 }
 
