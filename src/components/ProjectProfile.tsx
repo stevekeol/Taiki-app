@@ -9,7 +9,7 @@ import {IProduct} from '../constants/types';
 import {IProProfile} from '../constants/BlockTree/@types';
 import {useTheme, useTranslation} from '../hooks/';
 
-const Product = ({logo, name, bio, href}: IProProfile) => {
+const Product = (profile: IProProfile) => {
   const {t} = useTranslation();
   const navigation = useNavigation();
   const {assets, colors, sizes} = useTheme();
@@ -26,7 +26,7 @@ const Product = ({logo, name, bio, href}: IProProfile) => {
       width={isHorizontal ? CARD_WIDTH * 2 + sizes.sm : CARD_WIDTH}>
       <Image
         resizeMode="cover"
-        source={{uri: logo}}
+        source={{uri: profile.logo}}
         style={{
           height: isHorizontal ? 114 : 110,
           width: !isHorizontal ? '100%' : sizes.width / 2.435,
@@ -38,7 +38,7 @@ const Product = ({logo, name, bio, href}: IProProfile) => {
         paddingLeft={isHorizontal ? sizes.sm : 0}
         paddingBottom={isHorizontal ? sizes.s : 0}>
         <Text p marginBottom={sizes.s}>
-          {bio}
+          {profile.bio}
         </Text>
         <TouchableOpacity>
           <Block row flex={0} align="center">
@@ -48,12 +48,12 @@ const Product = ({logo, name, bio, href}: IProProfile) => {
               semibold
               size={sizes.linkSize}
               onPress={
-                (title) => {
-                  navigation.navigate('Web', { name });
+                () => {
+                  navigation.navigate('Web', { uri: profile.web });
                 }
               }
               marginRight={sizes.s}>
-              {name}
+              {profile.name}
             </Text>
             <Image source={assets.arrow} color={colors.link} />
           </Block>
@@ -64,3 +64,37 @@ const Product = ({logo, name, bio, href}: IProProfile) => {
 };
 
 export default Product;
+
+// {"navigation": 
+//   {
+//     "addListener": [Function addListener], 
+//     "canGoBack": [Function canGoBack], 
+//     "closeDrawer": [Function anonymous], 
+//     "dangerouslyGetParent": [Function dangerouslyGetParent], 
+//     "dangerouslyGetState": [Function anonymous], 
+//     "dispatch": [Function dispatch], "goBack": [Function anonymous], 
+//     "isFocused": [Function isFocused], "jumpTo": [Function anonymous], 
+//     "navigate": [Function anonymous], "openDrawer": [Function anonymous], 
+//     "pop": [Function anonymous], "popToTop": [Function anonymous], 
+//     "push": [Function anonymous], "removeListener": [Function removeListener], 
+//     "replace": [Function anonymous], "reset": [Function anonymous], 
+//     "setOptions": [Function setOptions], "setParams": [Function anonymous], 
+//     "toggleDrawer": [Function anonymous]
+//    }, 
+//     "route": {"key": "Web-WL7j344aAnOSx7rw9Ma1N", "name": "Web", "params": {"uri": "https://www.baidu.com"}
+//   }
+// }
+
+
+// {
+//   "addListener": [Function addListener], "canGoBack": [Function canGoBack], 
+//   "closeDrawer": [Function anonymous], "dangerouslyGetParent": [Function dangerouslyGetParent], 
+//   "dangerouslyGetState": [Function anonymous], "dispatch": [Function dispatch], 
+//   "goBack": [Function anonymous], "isFocused": [Function isFocused], 
+//   "jumpTo": [Function anonymous], "navigate": [Function anonymous], 
+//   "openDrawer": [Function anonymous], "pop": [Function anonymous], 
+//   "popToTop": [Function anonymous], "push": [Function anonymous], 
+//   "removeListener": [Function removeListener], "replace": [Function anonymous], 
+//   "reset": [Function anonymous], "setOptions": [Function setOptions], 
+//   "setParams": [Function anonymous], "toggleDrawer": [Function anonymous]
+// }
