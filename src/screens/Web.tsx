@@ -8,7 +8,6 @@ const Web = (obj: Object) => {
     // 此处webview的内容，距离顶部状态栏的距离，写死了
     <View style={{ flex: 1, marginTop: -20 }}>
       <WebView
-        title={{name: obj?.route?.name}}
         source={{uri: obj?.route?.params?.uri}}
         style={{marginTop: 20}}
       />

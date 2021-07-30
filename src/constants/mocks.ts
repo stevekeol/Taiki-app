@@ -89,42 +89,42 @@ export const FOLLOWING: IProduct[] = [
   {
     id: 1,
     type: 'vertical',
-    title: 'Unique activities with local experts.',
+    title: '端对端加密的去中心化社交, 让交流回归到更朴素自然的状态',
     image:
       'https://images.unsplash.com/photo-1604998103924-89e012e5265a?fit=crop&w=450&q=80',
   },
   {
     id: 2,
     type: 'vertical',
-    title: 'The highest status people.',
+    title: '移动端全节点, 作为公链生态层为上层的应用（智能合约/小程序等）提供共识，存储，通信等基础设施功能',
     image:
       'https://images.unsplash.com/photo-1563492065599-3520f775eeed?fit=crop&w=450&q=80',
   },
   {
     id: 3,
     type: 'horizontal',
-    title: 'Experiences and things to do wherever you are.',
+    title: '小程序/智能合约的解释执行VM, 让 @Taiki 以开放的姿态欢迎第三方应用',
     image:
       'https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?fit=crop&w=450&q=80',
   },
   {
     id: 4,
     type: 'vertical',
-    title: 'Get more followers and grow.',
+    title: '安全的语音视频工具',
     image:
       'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fit=crop&w=450&q=80',
   },
   {
     id: 5,
     type: 'vertical',
-    title: 'New ways to meet your business goals.',
+    title: '精选的区块链项目集锦, 可快速触达源码、白皮书、多社区，让开发者和终端用户',
     image:
       'https://images.unsplash.com/photo-1497215728101-856f4ea42174?fit=crop&w=450&q=80',
   },
   {
     id: 6,
     type: 'horizontal',
-    title: 'Adventures - Multi day trips with meals and stays.',
+    title: 'Bcoin + Hera + Status + dogeHouse + BlockSpider + TON/Telegram',
     image:
       'https://images.unsplash.com/photo-1468078809804-4c7b3e60a478?fit=crop&w=450&q=80',
   },

@@ -155,7 +155,7 @@ export default () => {
         name="Web"
         component={Web}
         options={{title: '精选区块链项目'}}
-      />               
+      />                   
     </Stack.Navigator>
   );
 };

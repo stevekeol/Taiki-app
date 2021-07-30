@@ -89,10 +89,10 @@ const DrawerContent = (
 
   // screen list for Drawer menu
   const screens = [
-    {name: t('screens.profects'),       to: 'BlockTree',  icon: assets.components},
+    {name: t('screens.projects'),       to: 'BlockTree',  icon: assets.components},
     {name: t('screens.home'),           to: 'Home',       icon: assets.home},
     {name: t('screens.chat'),           to: 'Chat',       icon: assets.chat},
-    {name: t('screens.about'),          to: 'About',      icon: assets.star},
+    {name: t('screens.about'),          to: 'About',      icon: assets.more},
     // {name: t('screens.components'),  to: 'Components', icon: assets.components},
     // {name: t('screens.articles'),    to: 'Articles',   icon: assets.document},
     // {name: t('screens.rental'),      to: 'Rentals',    icon: assets.rental},
@@ -159,7 +159,7 @@ const DrawerContent = (
               radius={0}
               width={14}
               height={14}
-              source={assets.star}
+              source={assets.more}
               color={colors['white']}
             />
           </Block>
