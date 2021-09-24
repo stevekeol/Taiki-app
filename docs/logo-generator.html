@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taiki - LOGO</title>
+</head>
+<body>
+    <canvas width="370" height="430"></canvas>
+    <button>下载png</button>
+    <style>
+        canvas{
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        const _canvas_ = document.querySelector('canvas')
+        const ctx = _canvas_.getContext('2d')
+
+        ctx.translate(-270, -180)
+
+        // 左侧
+        ctx.save()
+        ctx.translate(-2,-2)
+        ctx.beginPath()
+        ctx.moveTo(323, 314) // 左上角
+        ctx.lineTo(421, 483) // 右上角
+        ctx.lineTo(395, 583) // 右下角
+        ctx.lineTo(297, 414) // 左下角
+        ctx.closePath()
+        ctx.fillStyle = "#666"
+        ctx.fill()
+        ctx.restore()
+
+        // 右侧
+        ctx.save()
+        ctx.beginPath()
+        ctx.moveTo(431, 483) // 左上角
+        ctx.lineTo(602, 385) // 右上角
+        ctx.lineTo(577, 485) // 右下角
+        ctx.lineTo(405, 583) // 左下角
+        ctx.closePath()
+        ctx.fillStyle = "#333"
+        ctx.fill()
+        ctx.restore()
+
+        // 顶部
+        ctx.save()
+        ctx.translate(500,200)
+        ctx.rotate(Math.PI / 3)
+        ctx.fillStyle="#eee"
+        ctx.fillRect(0,0,200,200)
+        // ctx.strokeRect(0,0,200,200)
+        ctx.restore()
+
+
+        // 文字
+        ctx.save()
+        ctx.translate(150,350)
+        ctx.rotate(-Math.PI  / 6)
+        ctx.font="900 150px mpact, Charcoal, sans-serif"
+        ctx.fillStyle="#333"
+        ctx.fillText('Ti', 200, 200)
+        ctx.restore()
+
+
+        // 红点
+        ctx.save()
+        ctx.beginPath()
+        ctx.translate(370,172)
+        ctx.fillStyle="red"
+        ctx.arc(100, 100, 15, 0, 2*Math.PI);
+        
+        ctx.fill()
+        ctx.restore()
+
+
+        document.querySelector('button').addEventListener('click', () => {
+           
+
+            let _a_ = document.createElement('a')
+            _a_.download="";
+            _a_.href= _canvas_.toDataURL("image/png")
+            _a_.click()
+
+            cosole.log(_a_)
+        })
+       
+   
+
+    </script>
+</body>
+</html>
