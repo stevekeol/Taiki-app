@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.reactnativecommunity.netinfo.NetInfoPackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -14,6 +15,9 @@ import java.util.List;
 import com.my1rn.CustomToastPackage;  //customModule
 import com.my1rn.ContainerEnginePackage; //customModule
 import com.my1rn.HostApiDispatcher; //customModule
+
+import com.facebook.react.bridge.JSIModulePackage; // for react-native-reanimated
+import com.swmansion.reanimated.ReanimatedJSIModulePackage; // for react-native-reanimated
 
 // //@CONTAINER_ENGINE
 // import com.my1rn.config.HeraConfig;
@@ -44,6 +48,11 @@ public class MainApplication extends Application implements ReactApplication {
         @Override
         protected String getJSMainModuleName() {
           return "index";
+        }
+
+        @Override
+        protected JSIModulePackage getJSIModulePackage() {
+          return new ReanimatedJSIModulePackage(); // for react-native-reanimated
         }
       };
 
