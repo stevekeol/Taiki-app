@@ -288,7 +288,7 @@ LogBox.ignoreAllLogs(true);
 
 const chatClient = StreamChat.getInstance('q95x9hkbyd6p');
 const userToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoicm9uIn0.eRVjxLvd4aqCEHY_JRa97g6k7WpHEhxL7Z4K4yTot1c';
-const user = { id: 'ron' };
+const user = { id: 'ron', name: 'stevekeol', image: 'https://getstream.io/random_png/?id=ron&name=stevekeol' };
 
 const filters = {
   members: { $in: ['ron'] },
@@ -330,8 +330,8 @@ const ChannelScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView>
-      <Chat client={chatClient}>
-        <Channel channel={channel} keyboardVerticalOffset={headerHeight}>
+      <Chat client={chatClient} theme='messaging light'>
+        <Channel channel={channel} keyboardVerticalOffset={0}>
           <View style={StyleSheet.absoluteFill}>
             <MessageList />
             <MessageInput />
