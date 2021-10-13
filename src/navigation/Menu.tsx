@@ -94,7 +94,7 @@ const DrawerContent = (
   const screens = [
     {name: t('screens.home'),           to: 'Home',       icon: assets.home},
     {name: t('screens.chat'),           to: 'Chat',       icon: assets.chat},
-    {name: t('screens.dappMarket'),     to: 'DAppMarket', icon: assets.flight},
+    {name: t('screens.dappMarket'),     to: 'DApp',       icon: assets.flight},
     {name: t('screens.projects'),       to: 'BlockTree',  icon: assets.components},
     {name: t('screens.about'),          to: 'About',      icon: assets.more},
     // {name: t('screens.components'),  to: 'Components', icon: assets.components},

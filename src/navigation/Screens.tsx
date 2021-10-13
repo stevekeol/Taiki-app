@@ -23,7 +23,7 @@ import {
   Shopping,
   Web,
   BlockTree,
-  DAppMarket
+  DApp
 } from '../screens';
 import { useScreenOptions, useTranslation } from '../hooks';
 
@@ -158,9 +158,9 @@ export default () => {
         options={{title: '精选区块链项目'}}
       />
       <Stack.Screen
-        name="DAppMarket"
-        component={DAppMarket}
-        options={{title: 'DApp中心'}}
+        name="DApp"
+        component={DApp}
+        options={{title: 'DApp Center'}}
       />                       
     </Stack.Navigator>
   );
