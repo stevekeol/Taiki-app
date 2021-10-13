@@ -13,7 +13,7 @@ import Screens from './Screens';
 import {Block, Text, Switch, Button, Image} from '../components';
 import {useData, useTheme, useTranslation} from '../hooks';
 
-import { ContainerEngine } from '../../customModule';
+import { ContainerEngine } from '../customModule';
 
 const Drawer = createDrawerNavigator();
 

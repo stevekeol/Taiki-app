@@ -9,12 +9,12 @@
 import React from 'react';
 import 'react-native-gesture-handler';
 
-import {DataProvider} from './src/hooks';
+import { DataProvider } from './src/hooks';
 import AppNavigation from './src/navigation/App';
 
 // import type { Node } from 'react';
 
-import { ContainerEngine } from './customModule';
+import { ContainerEngine } from './src/customModule';
 
 // // 自定义原生模块
 // setTimeout(() => {
