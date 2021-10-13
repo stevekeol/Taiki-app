@@ -1,6 +1,9 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {Alert, Animated, Linking, StyleSheet} from 'react-native';
 
+/**
+ * @TODO 需要将抽屉栏改为底部栏时的着力点
+ */
 import {
   useIsDrawerOpen,
   createDrawerNavigator,

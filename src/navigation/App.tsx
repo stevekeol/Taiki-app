@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
 import { Text } from "react-native";
-import {Platform, StatusBar} from 'react-native';
+import { Platform, StatusBar } from 'react-native';
 // import {useFonts} from 'expo-font';
 // import AppLoading from 'expo-app-loading';
-import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 
 import Menu from './Menu';
-import {useData, ThemeProvider, TranslationProvider} from '../hooks';
+import { useData, ThemeProvider, TranslationProvider } from '../hooks';
 
 export default () => {
   const {isDark, theme, setTheme} = useData();

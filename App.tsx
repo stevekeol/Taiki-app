@@ -21,7 +21,7 @@ import { ContainerEngine } from './src/customModule';
 //   ToastExample.show('Taiki@JieGe', ToastExample.SHORT); // customModule
 // }, 1000)
 
-// 小程序容器引擎的初始化
+// 小程序容器引擎的初始化（提前初始化，以便快速打开小程序）@TODO 位置仍需调整
 ContainerEngine.init();
 
 // 需要时，载入并运行某个小程序

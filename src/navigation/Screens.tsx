@@ -1,5 +1,5 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import {
   Home, 
@@ -24,12 +24,12 @@ import {
   Web,
   BlockTree
 } from '../screens';
-import {useScreenOptions, useTranslation} from '../hooks';
+import { useScreenOptions, useTranslation } from '../hooks';
 
 const Stack = createStackNavigator();
 
 export default () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const screenOptions = useScreenOptions();
 
   return (
