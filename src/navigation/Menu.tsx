@@ -13,8 +13,8 @@ import {
 } from '@react-navigation/drawer';
 
 import Screens from './Screens';
-import {Block, Text, Switch, Button, Image} from '../components';
-import {useData, useTheme, useTranslation} from '../hooks';
+import { Block, Text, Switch, Button, Image } from '../components';
+import { useData, useTheme, useTranslation } from '../hooks';
 
 import { ContainerEngine } from '../customModule';
 
@@ -22,7 +22,7 @@ const Drawer = createDrawerNavigator();
 
 /* drawer menu screens navigation */
 const ScreensStack = () => {
-  const {colors} = useTheme();
+  const { colors } = useTheme();
   const isDrawerOpen = useIsDrawerOpen();
   const animation = useRef(new Animated.Value(0)).current;
 
@@ -92,9 +92,10 @@ const DrawerContent = (
 
   // screen list for Drawer menu
   const screens = [
-    {name: t('screens.projects'),       to: 'BlockTree',  icon: assets.components},
     {name: t('screens.home'),           to: 'Home',       icon: assets.home},
     {name: t('screens.chat'),           to: 'Chat',       icon: assets.chat},
+    {name: t('screens.dappMarket'),     to: 'DAppMarket', icon: assets.flight},
+    {name: t('screens.projects'),       to: 'BlockTree',  icon: assets.components},
     {name: t('screens.about'),          to: 'About',      icon: assets.more},
     // {name: t('screens.components'),  to: 'Components', icon: assets.components},
     // {name: t('screens.articles'),    to: 'Articles',   icon: assets.document},
@@ -129,7 +130,7 @@ const DrawerContent = (
             width={33}
             height={33}
             color={colors.text}
-            source={assets.logo}
+            source={assets.taikiLogo}
             marginRight={sizes.sm}
           />
           <Block>
@@ -143,7 +144,7 @@ const DrawerContent = (
         </Block>
 
       {/* 临时: 进入小程序容器引擎 */}
-        <Button
+{/*        <Button
           row
           justify="flex-start"
           marginBottom={sizes.s}
@@ -169,7 +170,7 @@ const DrawerContent = (
           <Text p semibold={true} color={labelColor}>
             {t('screens.containerEngine')}
           </Text>
-        </Button>        
+        </Button>     */}   
 
         {screens?.map((screen, index) => {
           const isActive = active === screen.to;
@@ -260,7 +261,7 @@ const DrawerContent = (
 
 /* drawer menu navigation */
 export default () => {
-  const {gradients} = useTheme();
+  const { gradients } = useTheme();
 
   return (
     <Block gradient={gradients.light}>

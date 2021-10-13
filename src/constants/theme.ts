@@ -32,6 +32,7 @@ export const WEIGHTS: ThemeWeights = {
 };
 
 export const ICONS: ThemeIcons = {
+  taikiLogo: require('../assets/icons/taikiLogo.png'),
   apple: require('../assets/icons/apple.png'),
   google: require('../assets/icons/google.png'),
   facebook: require('../assets/icons/facebook.png'),

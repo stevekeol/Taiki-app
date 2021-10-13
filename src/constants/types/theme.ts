@@ -242,6 +242,7 @@ export interface ThemeIcons {
   train: ImageSourcePropType;
   users: ImageSourcePropType;
   warning: ImageSourcePropType;
+  taikiLogo: ImageSourcePropType;
 }
 
 export interface ThemeAssets {

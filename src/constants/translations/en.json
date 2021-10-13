@@ -62,11 +62,11 @@
     // "home": "【进】首页",
     // "chat": "【行】加密聊天",
     // "about": "【中】憋说话 吻我",
-    "containerEngine": "【项】Container Enginer",
-    "projects": "【目】Blockchain Projects",
-    "home": "【进】Home",
-    "chat": "【行】Chat",
-    "about": "【中】About",    
+    "containerEngine": "ConEnginer",
+    "projects": "BlockTree",
+    "home": "Home",
+    "chat": "Chat",
+    "about": "About",    
     "components": "Components",
     "articles": "Articles",
     "rental": "Rental",
@@ -81,7 +81,8 @@
     "login": "Login",
     "booking": "Booking",
     "pro": "Pro",
-    "shopping": "Shopping"
+    "shopping": "Shopping",
+    "dappMarket": "DApp"
   },
   "navigation": {
     "home": "Taiki@stevekeol",
