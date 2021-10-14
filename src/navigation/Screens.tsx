@@ -37,6 +37,7 @@ export default () => {
     // 页面栈的导航器（screenOptions就包含了所有页面顶部通用的Header栏）
     <Stack.Navigator screenOptions={screenOptions.stack}>
       <Stack.Screen
+        // 这个name是路由的名字
         name="Home"
         component={Home}
         options={{title: t('navigation.home')}}
@@ -159,13 +160,17 @@ export default () => {
       <Stack.Screen
         name="Web"
         component={Web}
-        options={{title: '精选区块链项目'}}
+        options={{
+          title: '精选区块链项目', 
+          // @TODO 此处有bug，当不显示Header时，顶部的任务栏也没有高度了(即时间，网络那一栏)
+          headerShown: false 
+        }}
       />
       <Stack.Screen
         name="DApp"
         component={DApp}
         options={{title: 'DApp Center'}}
-      />                       
+      />
     </Stack.Navigator>
   );
 };
