@@ -31,6 +31,12 @@ export const WEIGHTS: ThemeWeights = {
   black: Platform.OS === 'ios' ? '900' : 'normal',
 };
 
+
+/**
+ * @TODO
+ * 需要移除不相关的多余的require和assets/png
+ * @type {ThemeIcons}
+ */
 export const ICONS: ThemeIcons = {
   taikiLogo: require('../assets/icons/taikiLogo.png'),
   dot: require('../assets/icons/dot.png'),

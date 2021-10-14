@@ -34,7 +34,7 @@ export default () => {
   const screenOptions = useScreenOptions();
 
   return (
-    // 页面栈的导航器
+    // 页面栈的导航器（screenOptions就包含了所有页面顶部通用的Header栏）
     <Stack.Navigator screenOptions={screenOptions.stack}>
       <Stack.Screen
         name="Home"
@@ -101,7 +101,11 @@ export default () => {
       <Stack.Screen
         name="Chat"
         component={Chat}
-        options={{title: '加密聊天'}}
+        options={{
+          title: '加密聊天', 
+          // @TODO 不显示Header
+          headerShown: false
+        }}
       />  
 
       <Stack.Screen

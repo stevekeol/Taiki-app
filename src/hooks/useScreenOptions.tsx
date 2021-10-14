@@ -49,6 +49,10 @@ export default () => {
       <Block row flex={0} align="center" marginRight={sizes.padding}>
         <TouchableOpacity
           style={{marginRight: -sizes.xs}}
+          /**
+           * @TODO
+           * 此处需要根据各个不同的页面定制不同的扩展功能，而非单一的打开某个新页面
+           */
           onPress={() =>
             navigation.navigate('Screens', {
               screen: 'About',
@@ -57,6 +61,7 @@ export default () => {
             source={icons.dot} 
             radius={0} 
             color={colors.icon} 
+            // @TODO 此处不应该写死了尺寸
             width={20}
             height={20} />
           <Block
