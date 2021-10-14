@@ -1,28 +1,23 @@
 import React from 'react';
-import {TouchableOpacity} from 'react-native';
-import {
-  StackHeaderTitleProps,
-  CardStyleInterpolators,
-} from '@react-navigation/stack';
-import {useNavigation} from '@react-navigation/core';
-import {DrawerActions} from '@react-navigation/native';
-import {StackHeaderOptions} from '@react-navigation/stack/lib/typescript/src/types';
+import { TouchableOpacity } from 'react-native';
+import { StackHeaderTitleProps, CardStyleInterpolators } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/core';
+import { DrawerActions } from '@react-navigation/native';
+import { StackHeaderOptions } from '@react-navigation/stack/lib/typescript/src/types';
 
-import {useData} from './useData';
-import {useTranslation} from './useTranslation';
-
-import Image from '../components/Image';
-import Text from '../components/Text';
-import useTheme from '../hooks/useTheme';
-import Button from '../components/Button';
-import Block from '../components/Block';
+import { useData, useTheme, useTranslation } from '../hooks/';
+import { Block, Button, Image, Text } from '../components/';
 
 export default () => {
-  const {t} = useTranslation();
-  const {user} = useData();
+  const { t } = useTranslation();
+  const { user } = useData();
   const navigation = useNavigation();
-  const {icons, colors, gradients, sizes} = useTheme();
+  const { icons, colors, gradients, sizes } = useTheme();
 
+  /**
+   * @TODO
+   * 定制页面框架顶部的菜单栏
+   */
   const menu = {
     headerStyle: {elevation: 0},
     headerTitleAlign: 'left',
@@ -30,24 +25,40 @@ export default () => {
     headerLeftContainerStyle: {paddingLeft: sizes.s},
     headerRightContainerStyle: {paddingRight: sizes.s},
     cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+    /**
+     * @TODO
+     * 定制菜单栏title
+     */
     headerTitle: ({children}: StackHeaderTitleProps) => (
       <Text p>{children}</Text>
     ),
+    /**
+     * @TODO
+     * 定制菜单栏的抽屉展开符
+     */    
     headerLeft: () => (
       <Button onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
         <Image source={icons.menu} radius={0} color={colors.icon} />
       </Button>
     ),
+    /**
+     * @TODO
+     * 定制菜单栏右边的功能扩展/功能常驻按钮
+     */    
     headerRight: () => (
       <Block row flex={0} align="center" marginRight={sizes.padding}>
         <TouchableOpacity
-          style={{marginRight: sizes.sm}}
+          style={{marginRight: -sizes.xs}}
           onPress={() =>
             navigation.navigate('Screens', {
-              screen: 'Pro',
-            })
-          }>
-          <Image source={icons.bell} radius={0} color={colors.icon} />
+              screen: 'About',
+            })} >
+          <Image 
+            source={icons.dot} 
+            radius={0} 
+            color={colors.icon} 
+            width={20}
+            height={20} />
           <Block
             flex={0}
             right={0}
@@ -58,7 +69,7 @@ export default () => {
             gradient={gradients?.primary}
           />
         </TouchableOpacity>
-        <TouchableOpacity
+        {/*<TouchableOpacity
           onPress={() =>
             navigation.navigate('Screens', {
               screen: 'Pro',
@@ -80,7 +91,7 @@ export default () => {
               3
             </Text>
           </Block>
-        </TouchableOpacity>
+        </TouchableOpacity>*/}
       </Block>
     ),
   } as StackHeaderOptions;
@@ -136,6 +147,10 @@ export default () => {
     },
     profile: {
       ...menu,
+      /**
+       * @TODO
+       * 需要定制页面框架顶部的功能入口时，着力点
+       */
       headerRight: () => (
         <Block row flex={0} align="center" marginRight={sizes.padding}>
           <TouchableOpacity
@@ -159,7 +174,7 @@ export default () => {
           <TouchableOpacity
             onPress={() =>
               navigation.dispatch(
-                DrawerActions.jumpTo('Screens', {screen: 'Profile'}),
+                DrawerActions.jumpTo('Screens', {screen: 'About'}),
               )
             }>
             <Image

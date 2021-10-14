@@ -21,6 +21,6 @@ export const ThemeProvider = ({
 };
 
 export default function useTheme(): ITheme {
-  const {theme} = React.useContext(ThemeContext);
+  const { theme } = React.useContext(ThemeContext);
   return theme;
 }

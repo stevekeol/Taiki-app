@@ -1,7 +1,7 @@
-import React, {useCallback, useState} from 'react';
+import React, { useCallback, useState } from 'react';
 
-import {useData, useTheme, useTranslation} from '../hooks/';
-import {Block, Button, Image, Input, Product, Text} from '../components/';
+import { useData, useTheme, useTranslation } from '../hooks/';
+import { Block, Button, Image, Input, Product, Text } from '../components/';
 
 const Home = () => {
   const {t} = useTranslation();

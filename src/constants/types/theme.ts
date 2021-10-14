@@ -207,6 +207,7 @@ export interface ThemeWeights {
   black?: TextStyle['fontWeight'];
 }
 export interface ThemeIcons {
+  dot: ImageSourcePropType;
   apple: ImageSourcePropType;
   google: ImageSourcePropType;
   facebook: ImageSourcePropType;
