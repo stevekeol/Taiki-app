@@ -12,7 +12,7 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-import com.my1rn.CustomToastPackage;  //customModule
+import com.my1rn.ToastPackage;  //customModule
 import com.my1rn.ContainerEnginePackage; //customModule
 import com.my1rn.HostApiDispatcher; //customModule
 
@@ -40,7 +40,7 @@ public class MainApplication extends Application implements ReactApplication {
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
           
-          packages.add(new CustomToastPackage()); //在MainApplication中注册模块
+          packages.add(new ToastPackage()); //在MainApplication中注册模块
           packages.add(new ContainerEnginePackage()); //在MainApplication中注册模块
           return packages;
         }

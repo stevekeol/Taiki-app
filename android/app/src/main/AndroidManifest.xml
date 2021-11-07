@@ -19,7 +19,7 @@
       </intent-filter>
     </activity>
     <activity android:name=".main.HeraActivity" >
-      
+      <!-- 这里有用吗？ -->
     </activity>
   </application>
 </manifest>
